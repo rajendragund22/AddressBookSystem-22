@@ -8,7 +8,16 @@ public class ContactDetails {
     private int zip;
     private long phoneNumber;
     private String email;
-
+    public ContactDetails(String firstName, String lastName, String addressCity, String state, String email, Long zip, Long phoneNumber) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.addressCity = addressCity;
+        this.state = state;
+        this.email = email;
+        this.zip = Math.toIntExact(zip);
+        this.phoneNumber = phoneNumber;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -73,8 +82,8 @@ public class ContactDetails {
                         "lastName=" + lastName + '\'' +
                         "addressCity=" + addressCity + '\'' +
                         "state=" + state + '\'' +
-                        "email=" + email + '\''+
-                        "zip=" + zip +'\''+
+                        "email=" + email + '\'' +
+                        "zip=" + zip + '\'' +
                         "phoneNumber=" + phoneNumber + '\'';
 
     }
