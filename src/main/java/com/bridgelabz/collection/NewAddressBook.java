@@ -30,6 +30,17 @@ public class NewAddressBook {
         person.setZip(zip.intValue());
         person.setPhoneNumber(phoneNumber.intValue());
         person.setEmail(email);
-        System.out.println("The Contact Details of " + firstName + " "+lastName +"\n" + person);
+        System.out.println("The Contact Details of " + firstName + " " + lastName + "\n" + person);
+    }
+
+    public void editContact() {
+        ContactDetails person = new ContactDetails();
+        System.out.println("Enter the First Name of person");
+        String editName = sc.nextLine();
+        if (editName.equalsIgnoreCase(person.getFirstName()))
+            addContact();
+        else
+            System.out.println("The Entered First Name Is Not Match");
+        editContact();
     }
 }
